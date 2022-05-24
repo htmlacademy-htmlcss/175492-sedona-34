@@ -52,8 +52,48 @@
       </ul>
     <section class="filter">
       <h2 class="visually-hidden">Фильтры</h2>
-      <form class="form-filter" action="https://echo.htmlacademy.ru/" method="get">
-
+      <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filter-group">
+          <legend class="filter-title">Инфраструктура:</legend>
+          <label>
+            <input type="checkbox" name="filter-form-pool" checked>
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox" name="filter-form-parking" checked>
+            Парковка
+          </label>
+          <label>
+            <input type="checkbox" name="filter-form-wifi">
+            Wi-Fi
+          </label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend class="filter-title">Тип Жилья:</legend>
+          <label>
+            <input type="radio" name="filter-form-housing" value="hotel" checked>
+            Гостиница
+          </label>
+          <label>
+            <input type="radio" name="filter-form-housing" value="motel">
+            Мотель
+          </label>
+          <label>
+            <input type="radio" name="filter-form-housing" value="apartaments">
+            Апартаменты
+          </label>
+        </fieldset>
+        <fieldset class="filter-group">
+          <legend class="filter-title">Стоимость, ₽:</legend>
+          <label class="visually-hidden" for="filter-form-price-from"></label>
+          <input type="text" name="filter-form-price-from" id="filter-form-price-from" value="0">
+          <label class="visually-hidden" for="filter-form-price-to"></label>
+          <input type="text" name="filter-form-price-to" id="filter-form-price-to" value="9000">
+          <label class="visually-hidden" for="filter-form-range"></label>
+          <input type="range" id="filter-form-range" min="0" max="10000">
+        </fieldset>
+        <button class="button" type="submit">Применить</button>
+        <button class="button-reset" type="reset">Сбросить</button>
       </form>
     </section>
   </main>

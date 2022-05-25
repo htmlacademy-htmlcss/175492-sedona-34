@@ -13,24 +13,24 @@
     <nav class="navigation">
       <ul class="site-navigation">
         <li class="site-navigation-item">
-          <a class="link-item" href="#">Главная</a>
+          <a class="item-link" href="#">Главная</a>
         </li>
         <li class="site-navigation-item">
-          <a class="link-item" href="#">О Седоне</a>
+          <a class="item-link" href="#">О Седоне</a>
         </li>
 <!--Чтобы выделялся активный пункт меню добавляем класс navigation-item-active-->
         <li class="site-navigation-item site-navigation-item-active">
-          <a class="link-item" href="#">Гостиницы</a>
+          <a class="item-link" href="#">Гостиницы</a>
         </li>
       </ul>
       <ul class="user-navigation">
         <li class="user-navigation-item">
-          <a class="link-item" href="#">
+          <a class="item-link" href="#">
             <img src="#" alt="Поиск.">
           </a>
         </li>
         <li class="user-navigation-item">
-          <a class="link-item" href="#">
+          <a class="item-link" href="#">
             <img src="#" alt="Избранное.">
           </a>
         </li>
@@ -84,17 +84,41 @@
           </label>
         </fieldset>
         <fieldset class="filter-group">
-          <legend class="filter-title">Стоимость, ₽:</legend>
-          <label class="visually-hidden" for="filter-form-price-from"></label>
+          <legend class="filter-title">Стоимость,&nbsp;₽:</legend>
           <input type="text" name="filter-form-price-from" id="filter-form-price-from" value="0">
-          <label class="visually-hidden" for="filter-form-price-to"></label>
+          <label class="visually-hidden" for="filter-form-price-from">от</label>
           <input type="text" name="filter-form-price-to" id="filter-form-price-to" value="9000">
+          <label class="visually-hidden" for="filter-form-price-to">до</label>
           <label class="visually-hidden" for="filter-form-range"></label>
           <input type="range" id="filter-form-range" min="0" max="10000">
         </fieldset>
         <button class="button" type="submit">Применить</button>
         <button class="button-reset" type="reset">Сбросить</button>
       </form>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог</h2>
+      <p>Найдено гостиниц:<span class="catalog-counter">38</span></p>
+      <select class="sorting" aria-label="Сортировка">
+        <option value="cheap">Сначала дешёвые</option>
+      </select>
+      <ul class="view">
+        <li>
+          <a class="view-link view-link-active" href="#">
+            <img src="#" alt="Таблица.">
+          </a>
+        </li>
+        <li>
+          <a class="view-link" href="#">
+            <img src="#" alt="Слайд.">
+          </a>
+        </li>
+        <li>
+          <a class="view-link" href="#">
+            <img src="#" alt="Список.">
+          </a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer class="main-footer">

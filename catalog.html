@@ -126,7 +126,7 @@
           <p>Гостиница</p>
           <p>От 4000&nbsp;₽</p>
           <a class="button" href="#">Подробнее</a>
-          <button type="button">В избранное</button>
+          <button class="button" type="button">В избранное</button>
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
@@ -139,7 +139,7 @@
           <p>Гостиница</p>
           <p>От 5000&nbsp;₽</p>
           <a class="button" href="#">Подробнее</a>
-          <button type="button">В избранное</button>
+          <button class="button button-append" type="button">В избранное</button>
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
@@ -152,7 +152,7 @@
           <p>Гостиница</p>
           <p>От 2500&nbsp;₽</p>
           <a class="button" href="#">Подробнее</a>
-          <button type="button">В избранное</button>
+          <button class="button" type="button">В избранное</button>
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
@@ -164,13 +164,38 @@
           <p>Гостиница</p>
           <p>От 1500&nbsp;₽</p>
           <a class="button" href="#">Подробнее</a>
-          <button type="button">В избранное</button>
+          <button class="button" type="button">В избранное</button>
           <img class="star" src="#" alt="Звезда рейтинга">
           <img class="star" src="#" alt="Звезда рейтинга">
           <output class="rating-out" name="rating">Рейтинг: 5,0</output>
         </li>
       </ul>
+      <ul class="pagination">
+        <li class="pagination-item">
+          <a class="pagination-link pagination-active">1</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">2</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">3</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">4</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">...</a>
+        </li>
+        <li class="pagination-item">
+          <a class="pagination-link" href="#">10</a>
+        </li>
+      </ul>
+      <label for="sorting-quantity">Гостиниц на странице:</label>
+      <select class="sorting" name="sorting-quantity">
+        <option value="cheap">4</option>
+      </select>
     </section>
+
   </main>
   <footer class="main-footer">
     <ul class="social-list">

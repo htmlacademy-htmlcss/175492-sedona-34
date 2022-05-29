@@ -8,11 +8,10 @@
 <body>
   <header class="main-header">
     <a class="logo">
-      <img src="#" alt="Логотип города Седона.">
+      <img src="images/logo.svg" width="139" height="70" alt="Логотип города Седона.">
     </a>
     <nav class="navigation">
       <ul class="site-navigation">
-        <!--Чтобы выделялся активный пункт меню добавляем класс navigation-item-active-->
         <li class="site-navigation-item site-navigation-item-active">
           <a class="site-navigation-link" href="#">Главная</a>
         </li>
@@ -26,12 +25,13 @@
       <ul class="user-navigation">
         <li class="user-navigation-item">
           <a class="user-navigation-link" href="#">
-            <img src="#" alt="Поиск.">
+            <span class="visually-hidden">Поиск</span>
           </a>
         </li>
         <li class="user-navigation-item">
           <a class="user-navigation-link" href="#">
-            <img src="#" alt="Избранное.">
+            <span class="visually-hidden">Избранное</span>
+            <span>12</span>
           </a>
         </li>
         <li class="user-navigation-item">
@@ -42,23 +42,21 @@
   </header>
   <main class="main-index">
     <h1 class="visually-hidden">Гостиницы в Седоне</h1>
-    <!--Промо-блок-->
     <section class="promo">
-      <img src="#" alt="Добро пожаловать в Седону.">
+      <img src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону.">
       <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
     </section>
-    <!--Блок Преимущества-->
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
-      <ol class="adventages-list">
-        <li class="adventages-item">
+      <ol class="advantages-list">
+        <li class="advantages-item">
           <div class="advantages-text-column">
             <h3>Настоящий городок</h3>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
           <div class="advantages-img-column">
-            <img src="#" alt="Город Седона.">
+            <img src="images/advantages-city.jpg" width="800" height="384" alt="Город Седона.">
           </div>
           <ul class="advantages-sublist">
             <li class="advantages-subitem">
@@ -75,37 +73,35 @@
             </li>
           </ul>
         </li>
-        <li class="adventages-item">
+        <li class="advantages-item">
           <div class="advantages-text-column">
             <h3>Там есть мост дьявола</h3>
             <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </div>
           <div class="advantages-img-column">
-            <img src="#" alt="Мост дьявола.">
+            <img src="images/advantages-bridge.jpg" width="800" height="384" alt="Мост дьявола.">
           </div>
         </li>
-        <li class="adventages-item">
+        <li class="advantages-item">
           <h3>Небольшая площадь</h3>
           <p>Все достопримечательности находятся очень близко</p>
         </li>
-        <li class="adventages-item">
+        <li class="advantages-item">
           <h3>Красивая дорога</h3>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="adventages-item">
+        <li class="advantages-item">
           <h3>Мало туристов</h3>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ol>
     </section>
-    <!--Блок Поиск гостиныцы в Седоне-->
     <section class="search">
       <h2 class="visually-hidden">Поиск гостиныцы в Седоне</h2>
       <p>Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="button" href="#">Поиск гостиницы в Седоне</a>
-    </section>
-    <!--Блок подписки на рассылку-->
+    </section>>
     <section class="subscribe">
       <h2>Подпишитесь на рассылку</h2>
       <P>Только полезная информация и никакого спама, честное бойскаутское!</P>
@@ -119,24 +115,24 @@
   <footer class="main-footer">
     <ul class="social-list">
       <li class="social-item">
-        <a href="#">
-          <img src="#" alt="VK.">
+        <a class="button" href="https://vk.com/htmlacademy">
+          <span class="visually-hidden">VK</span>
         </a>
       </li>
       <li class="social-item">
-        <a href="#">
-          <img src="#" alt="Twitter.">
+        <a class="button" href="https://t.me/htmlacademy">
+          <span class="visually-hidden">Telegram</span>
         </a>
       </li>
       <li class="social-item">
-        <a href="#">
-          <img src="#" alt="Youtube.">
+        <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+          <span class="visually-hidden">Youtube</span>
         </a>
       </li>
     </ul>
     <a class="phone" href="tel:+74956660266">+7(495) 666-02-66</a>
     <a href="https://htmlacademy.ru/" target="_blank">
-      <img src="#" alt="htmlacademy.ru">
+      <img src="images/html-academy.svg" alt="htmlacademy.ru">
     </a>
   </footer>
 </body>

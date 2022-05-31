@@ -13,3 +13,39 @@
   src: url("fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  background-color: #fff;
+  color: #000;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button {
+  font-family: inherit; /*надо ли?*/
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.main-index {
+  background: #deebf4 url("../images/welcome-background.jpg") no-repeat;
+  background-size: 100% auto;
+}
+
+

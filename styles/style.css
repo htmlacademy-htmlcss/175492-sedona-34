@@ -161,3 +161,59 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+.filter-background {
+  background: #426e9b url("../images/filter-background.jpg") no-repeat;
+  background-size: 100% auto;
+  color: #fff;
+}
+
+.main-inner-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.filter-group {
+  border: none;
+}
+
+.filter-title {
+  font-weight: 700;
+}
+
+.filter-group label {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.filter-button {
+  background-color: #82B3D3;
+  border: none;
+}
+
+.button-reset {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.catalog-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}

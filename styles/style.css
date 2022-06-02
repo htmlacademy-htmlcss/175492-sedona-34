@@ -41,6 +41,15 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-second {
+  background-color: #82B3D3;
+}
+
+.button-append {
+  background-color: #7DB54F;
 }
 
 .promo {
@@ -53,7 +62,6 @@ body {
   color: #000;
   font-size: 30px;
   line-height: 36px;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -83,7 +91,6 @@ body {
 
 .advantages-title {
   color: #000;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -91,7 +98,6 @@ body {
 
 .advantages-subtitle {
   color: #000;
-  font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -112,12 +118,11 @@ body {
 .subscribe {
   color: #fff;
   background: #426e9b url("../images/subscribe-background.jpg") no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   text-align: center;
 }
 
 .subscribe-title {
-  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
@@ -164,12 +169,11 @@ body {
 
 .filter-background {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   color: #fff;
 }
 
 .main-inner-title {
-  font-weight: 700;
   font-size: 60px;
   line-height: 78px;
 }
@@ -185,7 +189,7 @@ body {
   border: none;
 }
 
-.filter-title {
+.filter-caption {
   font-weight: 700;
 }
 
@@ -208,12 +212,47 @@ body {
   color: #fff;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
-.catalog-title {
+.catalog-caption {
   color: #000;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.hotel-card {
+  font-size: 18px;
+  line-height: 21px;
+  list-style: none;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.pagination-link {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.pagination-active {
+  color: #000;
+  background-color: #F2F2F2;
+}
+
+.sorting-caption {
+  font-size: 18px;
+  line-height: 21px;
 }

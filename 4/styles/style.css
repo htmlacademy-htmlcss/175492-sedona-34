@@ -1,0 +1,219 @@
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  background-color: #fff;
+  color: #333;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.promo {
+  background: #deebf4 url("../images/welcome-background.jpg") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+
+.promo-title {
+  color: #000;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+/*можно ли так стилизовать?*/
+.advantages-text-column .advantages-title,
+.advantages-text-column .advantages-description {
+  color: #fff;
+}
+
+.advantages-text-column {
+  background-color: #82B3D3;
+}
+
+.advantages-subitem:nth-child(2) {
+  background-color: #fff;
+}
+
+.advantages-item:nth-child(4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-subtitle {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.search {
+  text-align: center;
+}
+
+.search-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  color: #fff;
+  background: #426e9b url("../images/subscribe-background.jpg") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+}
+
+.subscribe-email {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  background-color: #F2F2F2;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+}
+
+.main-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social-item {
+  list-style: none;
+}
+
+.phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.filter-background {
+  background: #426e9b url("../images/filter-background.jpg") no-repeat;
+  background-size: 100% auto;
+  color: #fff;
+}
+
+.main-inner-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 21px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.filter-group {
+  border: none;
+}
+
+.filter-title {
+  font-weight: 700;
+}
+
+.filter-group label {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.filter-button {
+  background-color: #82B3D3;
+  border: none;
+}
+
+.button-reset {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.catalog-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}

@@ -66,8 +66,8 @@ body {
 /* Навигация */
 .main-header {
   display: flex;
-  width: 1060px;
-  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .navigation {
@@ -86,12 +86,14 @@ body {
   padding: 0;
   width: 530px;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .user-navigation {
   margin: 0;
   padding: 0;
   max-width: 320px;
+  list-style: none;
 }
 
 .navigation-link {
@@ -102,9 +104,10 @@ body {
   text-align: center;
 }
 
+/* Промо-блок */
 .promo {
-  background: #deebf4 url("../images/welcome-background.jpg") no-repeat;
-  background-size: 100% auto;
+  background: #deebf4 url("../images/welcome-background.jpg") no-repeat 50% 0/100% auto;
+  /* background: url("../images/welcome-divider.png") no-repeat bottom center 100% auto; */
   text-align: center;
 }
 
@@ -115,11 +118,21 @@ body {
   text-transform: uppercase;
 }
 
+/* Блок преимуществ */
 .advantages-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-text-column .advantages-title,
@@ -128,7 +141,12 @@ body {
 }
 
 .advantages-text-column {
+  width: 400px;
   background-color: #82B3D3;
+}
+
+.advantages-image-column {
+  width: 800px;
 }
 
 .advantages-subitem:nth-child(2) {

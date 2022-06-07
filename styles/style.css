@@ -28,6 +28,16 @@ body {
   color: #333;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -106,8 +116,10 @@ body {
 
 /* Промо-блок */
 .promo {
-  background: #deebf4 url("../images/welcome-background.jpg") no-repeat 50% 0/100% auto;
-  /* background: url("../images/welcome-divider.png") no-repeat bottom center 100% auto; */
+  background-image: url("../images/welcome-background.jpg"), url("../images/welcome-divider.png");
+  background-color: #deebf4;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, 100% auto;
   text-align: center;
 }
 
@@ -203,6 +215,12 @@ body {
   text-transform: uppercase;
 }
 
+.search-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px
+}
+
 .subscribe {
   color: #fff;
   background: #426e9b url("../images/subscribe-background.jpg") no-repeat;
@@ -218,8 +236,11 @@ body {
 
 .subscribe-button {
   background-color: #82B3D3;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
   border: none;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe-email {
@@ -228,9 +249,10 @@ body {
   line-height: 21px;
   color: #000;
   background-color: #F2F2F2;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   border: none;
 }
+
 /* Футер */
 .main-footer {
   display: flex;

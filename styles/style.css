@@ -50,10 +50,6 @@ body {
   flex-grow: 1;
 }
 
-.logo {
-  cursor: pointer;
-}
-
 /* Кнопки */
 .button {
   font-family: inherit;
@@ -80,10 +76,20 @@ body {
 /* Навигация */
 .main-header {
   display: grid;
-  grid-template-columns: 140px 1fr;
+  grid-template-columns: 139px 1fr;
   column-gap: 30px;
   padding-left: 70px;
   padding-right: 70px;
+  margin-bottom: -5px;
+  z-index: 1;
+}
+
+.logo {
+  cursor: pointer;
+}
+/* Разрешена ли такая формулировка?? */
+.logo img {
+  display: block;
 }
 
 .navigation {
@@ -106,9 +112,9 @@ body {
   margin-right: 34px;
 }
 
-.site-navigation-link-active {
+/* .site-navigation-link-active::before {
   border-bottom: 2px solid #756257;
-}
+} */
 
 .user-navigation {
   margin: 0;
@@ -119,6 +125,7 @@ body {
 }
 
 .navigation-link {
+  display: block;
   font-size: 20px;
   font-weight: 700;
   color: #000;
@@ -130,11 +137,11 @@ body {
 
 /* Промо-блок */
 .promo {
-  background-image: url("../images/welcome-background.jpg"), url("../images/welcome-divider.png");
+  background-image: url("../images/welcome-background.jpg");
   background-color: #deebf4;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, 100% auto;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 51px;
 }
 
 .promo-title {

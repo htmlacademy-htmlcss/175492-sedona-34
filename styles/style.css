@@ -24,6 +24,7 @@ body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
+  font-weight: 400;
   background-color: #fff;
   color: #333;
 }
@@ -141,6 +142,7 @@ body {
   background-color: #deebf4;
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
   padding-top: 51px;
 }
 

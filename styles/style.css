@@ -50,6 +50,10 @@ body {
   flex-grow: 1;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 /* Кнопки */
 .button {
   font-family: inherit;
@@ -93,6 +97,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  padding-left: 17px;
+  padding-right: 17px;
+  align-items: center;
+}
+
+.site-navigation-item:not(:last-child) {
+  margin-right: 34px;
+}
+
+.site-navigation-link-active {
+  border-bottom: 2px solid #756257;
 }
 
 .user-navigation {
@@ -100,6 +115,7 @@ body {
   padding: 0;
   display: flex;
   list-style: none;
+  align-items: center;
 }
 
 .navigation-link {
@@ -108,6 +124,8 @@ body {
   color: #000;
   text-decoration: none;
   text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Промо-блок */
@@ -124,6 +142,11 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+}
+
+.promo-image {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Блок преимуществ */

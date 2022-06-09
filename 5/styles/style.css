@@ -75,26 +75,22 @@ body {
 
 /* Навигация */
 .main-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  column-gap: 30px;
   padding-left: 70px;
   padding-right: 70px;
 }
 
 .navigation {
   display: flex;
-  width: 891px;
   justify-content: space-between;
-}
-
-.logo {
-  width: 139px;
-  margin-right: 30px;
 }
 
 .site-navigation {
   margin: 0;
   padding: 0;
-  width: 530px;
+  display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
@@ -102,7 +98,7 @@ body {
 .user-navigation {
   margin: 0;
   padding: 0;
-  max-width: 320px;
+  display: flex;
   list-style: none;
 }
 
@@ -261,7 +257,7 @@ body {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  margin: 40px 70px 30px;
+  padding: 40px 70px 30px;
 }
 
 .social-list {

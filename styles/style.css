@@ -29,7 +29,7 @@ body {
   color: #333;
 }
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0;
@@ -37,7 +37,7 @@ body {
   height: 1px;
   width: 1px;
   overflow: hidden;
-} */
+}
 
 .container {
   width: 1200px;
@@ -82,7 +82,6 @@ body {
   padding-left: 70px;
   padding-right: 70px;
   margin-bottom: -5px;
-  z-index: 1;
 }
 
 .logo {
@@ -91,6 +90,8 @@ body {
 /* Разрешена ли такая формулировка?? */
 .logo img {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .navigation {
@@ -138,12 +139,22 @@ body {
 
 /* Промо-блок */
 .promo {
+  text-align: center;
+}
+
+.promo-container {
   background-image: url("../images/welcome-background.jpg");
   background-color: #deebf4;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
   padding-top: 51px;
+  padding-bottom: 82px;
+  margin-bottom: 63px;
+}
+
+.promo-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .promo-title {
@@ -151,11 +162,13 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 31px;
 }
 
-.promo-image {
-  display: block;
-  margin: 0 auto;
+.promo-caption {
+  margin-top: 0;
+  margin-bottom: 90px;
 }
 
 /* Блок преимуществ */

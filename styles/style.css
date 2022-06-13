@@ -126,8 +126,18 @@ body {
   padding: 24px 12px;
 }
 
-.user-navigation-item:nth-last-child(2) {
-  margin-right: 20px;
+.user-navigation-item:last-child {
+  margin-left: 20px;
+}
+
+.user-favorutes {
+  position: relative;
+}
+
+.number-favorites {
+  position: absolute;
+  font-size: 10px;
+  line-height: 13px;
 }
 
 /* Правильная ли стилизация кпонки? */
@@ -172,12 +182,10 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 31px;
+  margin: 0 290px 31px;
 }
 
 .promo-caption {
-  margin-top: 0;
   margin-bottom: 90px;
 }
 
@@ -214,7 +222,7 @@ body {
 .advantages-text-column {
   box-sizing: border-box;
   width: 400px;
-  padding: 102px 85px;
+  padding: 103px 85px 84px;
 }
 
 .advantages-image-column {
@@ -222,25 +230,19 @@ body {
 }
 
 .advantages-title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0 24px 30px;
   color: #000;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
 }
 
-.advantages-number {
-  margin-top: 0;
-  margin-bottom: 30px;
-}
-
 .advantages-description {
-  margin: 0;
+  margin-top: 30px;
 }
 
 .advantages-blue {
-  padding: 92px 85px;
+  padding: 92px 85px 74px;
   background-color: #82B3D3;
   color: #fff;
 }
@@ -252,7 +254,7 @@ body {
 .advantages-subitem {
   box-sizing: border-box;
   width: 400px;
-  padding: 80px 85px;
+  padding: 182px 85px 63px;
 }
 
 .advantages-subtitle {
@@ -260,12 +262,8 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  margin-top: 102px;
+  margin-top: 0;
   margin-bottom: 30px;
-}
-
-.advantages-subdescription {
-  margin: 0;
 }
 
 .advantages-subitem:nth-child(2) {
@@ -294,7 +292,6 @@ body {
 }
 
 .search-description {
-  margin-top: 0;
   margin-bottom: 56px;
 }
 
@@ -327,7 +324,6 @@ body {
 }
 
 .subscribe-description {
-  margin-top: 0;
   margin-bottom: 46px;
 }
 

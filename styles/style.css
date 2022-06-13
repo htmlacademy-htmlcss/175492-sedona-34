@@ -67,6 +67,7 @@ body {
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 15px;
+  box-sizing: border-box;
 }
 
 .button-second {
@@ -131,6 +132,7 @@ body {
 
 /* Правильная ли стилизация кпонки? */
 .user-navigation-button {
+  min-width: 160px;
   margin-top: 14px;
   margin-bottom: 19px;
 }
@@ -277,6 +279,8 @@ body {
 /* Поиск гостиниц */
 .search {
   text-align: center;
+  padding-top: 90px;
+  padding-bottom: 93px;
 }
 
 .search-title {
@@ -285,29 +289,46 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.search-description {
+  margin-top: 0;
+  margin-bottom: 56px;
 }
 
 .search-button {
+  width: 574px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 20px;
-  line-height: 36px
+  line-height: 36px;
+  padding: 12px 15px;
 }
 /* Подписка на рассылку */
+.subscribe {
+  text-align: center;
+  padding: 94px 200px;
+}
+
 .subscribe-index {
   color: #fff;
   background: #426e9b url("../images/subscribe-background.jpg") no-repeat;
   background-size: cover;
-  text-align: center;
-}
-
-.subscribe-catalog {
-  text-align: center;
 }
 
 .subscribe-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.subscribe-description {
+  margin-top: 0;
+  margin-bottom: 46px;
 }
 
 .subscribe-button {
@@ -340,9 +361,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  width: 142px;
   list-style: none;
-  align-items: center;
+  /* align-items: center; */
+}
+
+.social-button {
+  min-width: 48px;
+  min-height: 40px;
 }
 
 .phone {

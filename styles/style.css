@@ -29,15 +29,16 @@ body {
   color: #333;
 }
 
-/* .visually-hidden {
+.visually-hidden {
   position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
   padding: 0;
   border: 0;
-  height: 1px;
-  width: 1px;
+  clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 .container {
   width: 1200px;
@@ -53,6 +54,7 @@ body {
 
 /* Кнопки */
 .button {
+  display: block;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -64,6 +66,8 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
+  padding: 8px 15px;
+  box-sizing: border-box;
 }
 
 .button-second {
@@ -82,7 +86,6 @@ body {
   padding-left: 70px;
   padding-right: 70px;
   margin-bottom: -5px;
-  z-index: 1;
 }
 
 .logo {
@@ -91,6 +94,8 @@ body {
 /* Разрешена ли такая формулировка?? */
 .logo img {
   display: block;
+  position: relative;
+  z-index: 1;
 }
 
 .navigation {
@@ -104,25 +109,39 @@ body {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding-left: 17px;
-  padding-right: 17px;
-  align-items: center;
 }
-
-.site-navigation-item:not(:last-child) {
-  margin-right: 34px;
-}
-
-/* .site-navigation-link-active::before {
-  border-bottom: 2px solid #756257;
-} */
 
 .user-navigation {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: center;
+}
+
+.user-navigation .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
+  padding: 24px 12px;
+}
+
+.user-navigation-item:last-child {
+  margin-left: 20px;
+}
+
+.user-favorutes {
+  position: relative;
+}
+
+.number-favorites {
+  position: absolute;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.user-navigation-button {
+  min-width: 160px;
+  margin-top: 14px;
+  margin-bottom: 19px;
 }
 
 .navigation-link {
@@ -132,18 +151,35 @@ body {
   color: #000;
   text-decoration: none;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 17px;
+}
+/* Можно ли? Нормально ли работает во всех браузерах? */
+.site-navigation-link-active {
+  position: relative;
+  text-decoration-line: underline;
+  text-underline-offset: 23px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #756257;
 }
 
 /* Промо-блок */
 .promo {
+  text-align: center;
+}
+
+.promo-container {
   background-image: url("../images/welcome-background.jpg");
   background-color: #deebf4;
   background-repeat: no-repeat;
   background-size: cover;
-  text-align: center;
   padding-top: 51px;
+  padding-bottom: 82px;
+  margin-bottom: 63px;
+}
+
+.promo-image {
+  display: block;
+  margin: 0 auto;
 }
 
 .promo-title {
@@ -151,11 +187,11 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 290px 31px;
 }
 
-.promo-image {
-  display: block;
-  margin: 0 auto;
+.promo-caption {
+  margin-bottom: 90px;
 }
 
 /* Блок преимуществ */
@@ -189,22 +225,41 @@ body {
 }
 
 .advantages-text-column {
+  box-sizing: border-box;
   width: 400px;
+  padding: 103px 85px 84px;
 }
 
 .advantages-image-column {
   width: 800px;
 }
 
-.advantages-subitem {
-  width: 400px;
-}
-
 .advantages-title {
+  margin: 0 24px 30px;
   color: #000;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.advantages-description {
+  margin-top: 30px;
+}
+
+.advantages-blue {
+  padding: 92px 85px 74px;
+  background-color: #82B3D3;
+  color: #fff;
+}
+
+.advantages-blue .advantages-title {
+  color: #fff;
+}
+
+.advantages-subitem {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 182px 85px 63px;
 }
 
 .advantages-subtitle {
@@ -212,15 +267,8 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-}
-
-.advantages-blue {
-  background-color: #82B3D3;
-  color: #fff;
-}
-
-.advantages-blue .advantages-title {
-  color: #fff;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .advantages-subitem:nth-child(2) {
@@ -234,6 +282,8 @@ body {
 /* Поиск гостиниц */
 .search {
   text-align: center;
+  padding-top: 90px;
+  padding-bottom: 93px;
 }
 
 .search-title {
@@ -242,29 +292,44 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.search-description {
+  margin-bottom: 56px;
 }
 
 .search-button {
+  width: 574px;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 20px;
-  line-height: 36px
+  line-height: 36px;
+  padding: 12px 15px;
 }
 /* Подписка на рассылку */
+.subscribe {
+  text-align: center;
+  padding: 94px 200px;
+}
+
 .subscribe-index {
   color: #fff;
   background: #426e9b url("../images/subscribe-background.jpg") no-repeat;
   background-size: cover;
-  text-align: center;
-}
-
-.subscribe-catalog {
-  text-align: center;
 }
 
 .subscribe-title {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.subscribe-description {
+  margin: 22px 162px 46px;
 }
 
 .subscribe-button {
@@ -297,9 +362,18 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  width: 142px;
   list-style: none;
-  align-items: center;
+}
+
+.social-button {
+  display: block;
+  font-family: inherit;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  min-width: 47px;
+  min-height: 40px;
+  box-sizing: border-box;
 }
 
 .phone {
@@ -310,7 +384,7 @@ body {
   text-align: center;
 }
 /* Каталог */
-.filter-background {
+.filter-container {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;
   background-size: cover;
   color: #fff;
@@ -320,12 +394,16 @@ body {
 .main-inner-title {
   font-size: 60px;
   line-height: 78px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .breadcrumbs {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -333,13 +411,10 @@ body {
   line-height: 21px;
   color: #fff;
   text-decoration: none;
+  margin-right: 25px;
 }
 
 /* Фильтры каталога */
-.filter {
-  margin-top: 40px;
-}
-
 .filter-form {
   display: flex;
   justify-content: space-between;
@@ -386,7 +461,7 @@ body {
   line-height: 20px;
 }
 
-.button-reset {
+.reset-button {
   font-family: inherit;
   font-weight: 400;
   font-size: 16px;
@@ -400,46 +475,72 @@ body {
 /* Каталог отелей */
 
 .catalog {
-  padding: 50px 71px 25px 73px;
+  padding: 50px 71px 25px 72px;
 }
-
-.catalog-caption {
-  margin: 0;
-  color: #000;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-}
-
+/* Сортировка каталога */
 .sorting-container {
   display: flex;
   margin-bottom: 56px;
 }
 
+.catalog-caption {
+  margin: 0;
+  margin-right: auto;
+  color: #000;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+.sorting-select {
+  /* box-sizing: border-box; */
+  min-width: 160px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 21px;
+  /* padding: 14px 20px; */
+}
+
 .view {
   margin: 0;
+  margin-left: 78px;
   padding: 0;
   display: flex;
   list-style: none;
-  text-align: center;
+}
+
+.view li:not(:last-child) {
+  margin-right: 8px;
 }
 
 .view-link {
+  display: block;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
   color: #000;
   text-decoration: none;
 }
 
-.hotel {
+.view-link-active {
+  border: 2px solid #000;
+}
+/* Карточки каталога */
+.hotel-list {
   margin: 0;
   padding: 0;
   margin-bottom: 96px;
+  list-style: none;
 }
 
 .hotel-card {
   font-size: 18px;
   line-height: 21px;
-  list-style: none;
 }
 
 .hotel-card-title {
@@ -448,7 +549,7 @@ body {
   color: #000;
 }
 
-.rating {
+.hotel-rating {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
@@ -457,11 +558,11 @@ body {
 /* Пагинация */
 .pagination-container {
   display: flex;
-  justify-content: space-between;
 }
 
 .pagination {
   margin: 0;
+  margin-right: auto;
   padding: 0;
   display: flex;
   list-style: none;
@@ -475,6 +576,9 @@ body {
   background-color: #82B3D3;
   font-size: 20px;
   line-height: 36px;
+  width: 60px;
+  height: 60px;
+  padding: 12px 0;
 }
 
 .pagination-active {
@@ -486,6 +590,8 @@ body {
 .sorting-caption {
   font-size: 18px;
   line-height: 21px;
+  align-self: center;
+  margin-right: 51px;
 }
 
 

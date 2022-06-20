@@ -29,6 +29,10 @@ body {
   color: #333;
 }
 
+img {
+  object-fit: contain;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -93,7 +97,7 @@ body {
 .logo {
   cursor: pointer;
 }
-/* Разрешена ли такая формулировка?? */
+
 .logo img {
   display: block;
   position: relative;
@@ -103,6 +107,16 @@ body {
 .navigation {
   display: flex;
   justify-content: space-between;
+}
+
+.navigation-link {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 17px;
 }
 
 .site-navigation {
@@ -146,15 +160,6 @@ body {
   margin-bottom: 19px;
 }
 
-.navigation-link {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px 17px;
-}
 /* Можно ли? Нормально ли работает во всех браузерах? */
 .site-navigation-link-active {
   position: relative;
@@ -178,6 +183,11 @@ body {
   padding-bottom: 82px;
   margin-bottom: 63px;
 }
+
+/* .promo-container::before {
+  background-image: url("../images/welcome-divider.png");
+  background-position: 50% 100%;
+} */
 
 .promo-image {
   display: block;
@@ -565,7 +575,7 @@ body {
   line-height: 21px;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto repeat(3, min-content);
   gap: 16px 20px;;
 }
@@ -578,7 +588,6 @@ body {
 
 .hotel-card-img {
   display: block;
-  object-fit: contain;
   margin-bottom: 16px;
 }
 

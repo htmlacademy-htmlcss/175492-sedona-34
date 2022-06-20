@@ -68,7 +68,7 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  padding: 8px 15px;
+  padding: 9px 15px 8px;
   box-sizing: border-box;
 }
 
@@ -566,6 +566,7 @@ body {
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
+  grid-template-rows: auto repeat(3, min-content);
   gap: 16px 20px;;
 }
 

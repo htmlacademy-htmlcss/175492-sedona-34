@@ -25,7 +25,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  background-color: #fff;
+  background-color: #F2F2F2;
   color: #333;
 }
 
@@ -46,6 +46,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -191,7 +193,7 @@ body {
 }
 
 .promo-caption {
-  margin-bottom: 90px;
+  margin: 0 270px 90px;
 }
 
 /* Блок преимуществ */
@@ -275,6 +277,18 @@ body {
   background-color: #fff;
 }
 
+.advantages-subitem-housing {
+  background: url("../images/house.svg") no-repeat 50% 80px;
+}
+
+.advantages-subitem-food {
+  background: url("../images/food.svg") no-repeat 50% 80px;
+}
+
+.advantages-subitem-souvenirs {
+  background: url("../images/souvenir.svg") no-repeat 50% 80px;
+}
+
 .advantages-lightblue {
   background-color: rgba(131, 179, 211, 0.2);
 }
@@ -330,6 +344,11 @@ body {
 
 .subscribe-description {
   margin: 22px 162px 46px;
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .subscribe-button {
@@ -422,13 +441,13 @@ body {
 
 .filter-form-left {
   display: flex;
-  width: 366px;
+  min-width: 366px;
   gap: 70px;
 }
 
 .filter-form-right {
   display: flex;
-  width: 520px;
+  width: 518px;
   gap: 70px;
 }
 
@@ -536,27 +555,59 @@ body {
   padding: 0;
   margin-bottom: 96px;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 18px;
 }
 
 .hotel-card {
   font-size: 18px;
   line-height: 21px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;;
+}
+
+.hotel-card-link {
+  grid-column: 1/-1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hotel-card-img {
+  display: block;
+  object-fit: contain;
+  margin-bottom: 16px;
 }
 
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
   color: #000;
+  margin: 0;
+}
+
+.hotel-type {
+  margin: 0;
+}
+
+.hotel-price {
+  margin: 0;
 }
 
 .hotel-rating {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  display: block;
+  padding: 9px 22px 8px 23px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
 }
 
 /* Пагинация */
-.pagination-container {
+.catalog-footer {
   display: flex;
 }
 

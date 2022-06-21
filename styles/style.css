@@ -61,6 +61,7 @@ img {
 /* Кнопки */
 .button {
   display: block;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -73,7 +74,6 @@ img {
   border-radius: 4px;
   cursor: pointer;
   padding: 9px 15px 8px;
-  box-sizing: border-box;
 }
 
 .button-second {
@@ -117,6 +117,17 @@ img {
   text-decoration: none;
   text-align: center;
   padding: 20px 17px;
+  position: relative;
+}
+
+.navigation-icon {
+  position: absolute;
+  fill: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .site-navigation {
@@ -147,15 +158,36 @@ img {
   margin-left: 20px;
 }
 
-.user-favorutes {
+/* .favorites {
   position: relative;
-}
+} */
 
 .number-favorites {
   position: absolute;
+  content: '';
+  top: 15px;
+  left: 24px;
+  background-color: #7DB54F;
+  color: #fff;
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
   font-size: 10px;
   line-height: 13px;
+  font-weight: 400;
 }
+
+/* .favorites::after {
+  display: block;
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
+  background-color: #7DB54F;
+  top: 15px;
+  left: 24px;
+} */
 
 .user-navigation-button {
   min-width: 160px;
@@ -211,13 +243,6 @@ img {
   margin: 0 290px 31px;
 }
 
-.advantages-number::before {
-  display: block;
-  counter-increment: advantages-number;
-  content: "— №" counter(advantages-number) " —";
-  margin-bottom: 30px;
-}
-
 .advantages-caption {
   margin: 0 270px 90px;
 }
@@ -233,6 +258,13 @@ img {
   list-style: none;
   background-color: rgba(131, 179, 211, 0.12);
   counter-reset: advantages-number;
+}
+
+.advantages-number::before {
+  display: block;
+  counter-increment: advantages-number;
+  content: "— №" counter(advantages-number) " —";
+  margin-bottom: 30px;
 }
 
 .advantages-item {
@@ -265,10 +297,6 @@ img {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-}
-
-.advantages-description {
-  margin-top: 30px;
 }
 
 .advantages-blue {

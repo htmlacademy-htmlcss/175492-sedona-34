@@ -76,14 +76,6 @@ img {
   padding: 9px 15px 8px;
 }
 
-.button-second {
-  background-color: #82B3D3;
-}
-
-.button-append {
-  background-color: #7DB54F;
-}
-
 /* Навигация */
 .main-header {
   display: grid;
@@ -158,10 +150,6 @@ img {
   margin-left: 20px;
 }
 
-/* .favorites {
-  position: relative;
-} */
-
 .number-favorites {
   position: absolute;
   content: '';
@@ -175,19 +163,10 @@ img {
   font-size: 10px;
   line-height: 13px;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-/* .favorites::after {
-  display: block;
-  position: absolute;
-  content: '';
-  border-radius: 50%;
-  min-height: 20px;
-  min-width: 20px;
-  background-color: #7DB54F;
-  top: 15px;
-  left: 24px;
-} */
 
 .user-navigation-button {
   min-width: 160px;
@@ -347,8 +326,7 @@ img {
 /* Поиск гостиниц */
 .search {
   text-align: center;
-  padding-top: 90px;
-  padding-bottom: 93px;
+  padding: 90px 200px 93px;
 }
 
 .search-title {
@@ -409,6 +387,8 @@ img {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  padding: 12px 15px;
+  min-width: 200px;
 }
 
 .subscribe-email {
@@ -426,6 +406,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 40px 70px 30px;
+  align-items: center;
 }
 
 .social-list {
@@ -440,10 +421,20 @@ img {
   font-family: inherit;
   background-color: #fff;
   color: #000;
-  cursor: pointer;
   min-width: 47px;
   min-height: 40px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.social-icon {
+  position: absolute;
+  fill: #83B3D3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
 
 .phone {
@@ -453,6 +444,24 @@ img {
   text-decoration: none;
   text-align: center;
 }
+
+.htmlacademy-logo {
+  position: relative;
+  display: block;
+  min-width: 115px;
+  min-height: 33px;
+}
+
+.htmlacademy-icon {
+  position: absolute;
+  fill: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
 /* Каталог */
 .filter-container {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;
@@ -492,14 +501,14 @@ img {
 
 .filter-form-left {
   display: flex;
-  min-width: 366px;
-  gap: 70px;
+  width: 366px;
+  justify-content: space-between;
 }
 
 .filter-form-right {
   display: flex;
   width: 518px;
-  gap: 70px;
+  justify-content: space-between;
 }
 
 .filter-group {
@@ -524,11 +533,13 @@ img {
   line-height: 21px;
 }
 
-.filter-button {
+.apply-button {
   background-color: #82B3D3;
   border: none;
   font-size: 16px;
   line-height: 20px;
+  padding: 14px 15px;
+  min-width: 160px;
 }
 
 .reset-button {
@@ -645,6 +656,14 @@ img {
 
 .hotel-price {
   margin: 0;
+}
+
+.button-second {
+  background-color: #82B3D3;
+}
+
+.button-append {
+  background-color: #7DB54F;
 }
 
 .hotel-rating {

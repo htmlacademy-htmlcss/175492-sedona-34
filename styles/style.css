@@ -666,6 +666,25 @@ img {
   background-color: #7DB54F;
 }
 
+.hotel-star {
+  background: url("../images/star.svg");
+  align-self: center;
+  height: 17px;
+  background-repeat: space;
+}
+
+.hotel-star-four {
+  width: 89px;
+}
+
+.hotel-star-three {
+  width: 66px;
+}
+
+.hotel-star-two {
+  width: 42px;
+}
+
 .hotel-rating {
   font-size: 16px;
   line-height: 20px;

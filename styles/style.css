@@ -671,7 +671,7 @@ img {
   opacity: 0.3;
 }
 
-.reset-button:focus {
+.reset-button:focus-visible {
   color: #fff;
   outline: 3px solid #83B3D3;
   border-radius: 4px;
@@ -743,7 +743,7 @@ img {
   border: 2px solid #000;
 }
 
-.view-link:focus {
+.view-link:focus-visible {
   border: 2px solid #68A2CA;
   border-radius: 4px;
   outline: none;

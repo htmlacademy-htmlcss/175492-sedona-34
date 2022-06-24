@@ -830,6 +830,14 @@ img {
   background-color: #7DB54F;
 }
 
+.button-second:hover {
+  background-color: #6C9E42;
+}
+
+.button-second:active {
+  background-color: #7DB54F;
+}
+
 .hotel-star {
   background: url("../images/star.svg");
   align-self: center;

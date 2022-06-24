@@ -85,10 +85,6 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button:disabled {
-  background-color: #E5E5E5;
-}
-
 /* Навигация */
 .main-header {
   display: grid;
@@ -430,6 +426,10 @@ img {
   background-color: #82B3D3;
 }
 
+.subscribe-button:disabled {
+  background-color: #E5E5E5;
+}
+
 .subscribe-email {
   font-weight: 400;
   font-size: 18px;
@@ -647,6 +647,10 @@ img {
   background-color: #82B3D3;
 }
 
+.apply-button:disabled {
+  background-color: #E5E5E5;
+}
+
 .reset-button {
   font-family: inherit;
   font-weight: 400;
@@ -830,11 +834,11 @@ img {
   background-color: #7DB54F;
 }
 
-.button-second:hover {
+.button-append:hover {
   background-color: #6C9E42;
 }
 
-.button-second:active {
+.button-append:active {
   background-color: #7DB54F;
 }
 
@@ -886,6 +890,7 @@ img {
 
 .pagination-link {
   background-color: #82B3D3;
+  border: 1px solid #82B3D3;
   font-size: 20px;
   line-height: 36px;
   width: 60px;
@@ -893,7 +898,25 @@ img {
   padding: 12px 0;
 }
 
+.pagination-link:hover {
+  background-color: #68A2CA;
+}
+
+.pagination-link:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-active {
+  border: none;
+  color: #000;
+  background-color: #F2F2F2;
+}
+.pagination-active:hover {
+  background-color: #F2F2F2;
+}
+
+.pagination-active:active {
   color: #000;
   background-color: #F2F2F2;
 }

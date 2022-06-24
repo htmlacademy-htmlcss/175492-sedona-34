@@ -76,6 +76,19 @@ img {
   padding: 9px 15px 8px;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
+}
+
 /* Навигация */
 .main-header {
   display: grid;
@@ -112,6 +125,14 @@ img {
   position: relative;
 }
 
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .navigation-icon {
   position: absolute;
   fill: #000;
@@ -122,6 +143,14 @@ img {
   margin: auto;
 }
 
+.navigation-link:hover .navigation-icon{
+  fill: #756157;
+}
+
+.navigation-link:active .navigation-icon{
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .site-navigation {
   margin: 0;
   padding: 0;
@@ -129,6 +158,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+}
+
+.site-navigation-link-active::before {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
 }
 
 .user-navigation {
@@ -172,15 +211,6 @@ img {
   min-width: 160px;
   margin-top: 14px;
   margin-bottom: 19px;
-}
-
-/* Можно ли? Нормально ли работает во всех браузерах? */
-.site-navigation-link-active {
-  position: relative;
-  text-decoration-line: underline;
-  text-underline-offset: 23px;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #756257;
 }
 
 /* Промо-блок */
@@ -351,6 +381,7 @@ img {
   line-height: 36px;
   padding: 12px 15px;
 }
+
 /* Подписка на рассылку */
 .subscribe {
   text-align: center;
@@ -389,6 +420,14 @@ img {
   line-height: 36px;
   padding: 12px 15px;
   min-width: 200px;
+}
+
+.subscribe-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:active {
+  background-color: #82B3D3;
 }
 
 .subscribe-email {
@@ -437,12 +476,28 @@ img {
   margin: auto;
 }
 
+.social-button:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-button:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
 .phone {
   font-size: 40px;
   line-height: 40px;
   color: #000;
   text-decoration: none;
   text-align: center;
+}
+
+.phone:hover {
+  color: #756157;
+}
+
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .htmlacademy-logo {
@@ -462,7 +517,15 @@ img {
   margin: auto;
 }
 
-/* Каталог */
+.htmlacademy-logo:hover .htmlacademy-icon {
+  fill: #756157;
+}
+
+.htmlacademy-logo:active .htmlacademy-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+/* Страница каталога */
 .filter-container {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;
   background-size: cover;
@@ -490,7 +553,34 @@ img {
   line-height: 21px;
   color: #fff;
   text-decoration: none;
-  margin-right: 25px;
+  display: block;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item:not(:last-child) {
+  padding-right: 25px;
+  background: url("../images/breadcrumbs-arrow.svg") no-repeat;
+  background-size: 5px 8px;
+  background-position: center right 10px;
+}
+
+.breadcrumbs-icon {
+  fill: #fff;
+}
+
+.breadcrumbs-link:hover .breadcrumbs-icon{
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active .breadcrumbs-icon{
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 /* Фильтры каталога */
@@ -533,6 +623,12 @@ img {
   line-height: 21px;
 }
 
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .apply-button {
   background-color: #82B3D3;
   border: none;
@@ -540,6 +636,15 @@ img {
   line-height: 20px;
   padding: 14px 15px;
   min-width: 160px;
+  margin-bottom: 20px;
+}
+
+.apply-button:hover {
+  background-color: #68A2CA;
+}
+
+.apply-button:active {
+  background-color: #82B3D3;
 }
 
 .reset-button {
@@ -553,10 +658,34 @@ img {
   border: none;
   cursor: pointer;
 }
-/* Каталог отелей */
 
+.reset-button:hover {
+  opacity: 0.6;
+}
+
+.reset-button:active {
+  opacity: 0.3;
+}
+
+.reset-button:focus {
+  color: #fff;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+/* Каталог отелей */
 .catalog {
   padding: 50px 71px 25px 72px;
+  position: relative;
+}
+
+.catalog::after {
+  content:'';
+  position: absolute;
+  left: 73px;
+  right: 72px;
+  border-bottom: 1px solid #E6E6E6;
+  bottom: 115px;
 }
 /* Сортировка каталога */
 .sorting-container {
@@ -576,13 +705,11 @@ img {
 }
 
 .sorting-select {
-  /* box-sizing: border-box; */
   min-width: 160px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
-  /* padding: 14px 20px; */
 }
 
 .view {
@@ -606,6 +733,35 @@ img {
   border-radius: 4px;
   color: #000;
   text-decoration: none;
+}
+
+.view-link:hover {
+  border: 2px solid #000;
+}
+
+.view-link:focus {
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+  outline: none;
+}
+
+.view-link:active {
+  border: 2px solid #000;
+}
+
+.view-link-table {
+  background: url("../images/icon-table.svg") no-repeat center;
+    background-size: 16px 14px;
+}
+
+.view-link-slide {
+  background: url("../images/icon-slideshow.svg") no-repeat center;
+    background-size: 16px 14px;
+}
+
+.view-link-list {
+  background: url("../images/icon-list.svg") no-repeat center;
+    background-size: 16px 14px;
 }
 
 .view-link-active {
@@ -659,6 +815,14 @@ img {
 }
 
 .button-second {
+  background-color: #82B3D3;
+}
+
+.button-second:hover {
+  background-color: #68A2CA;
+}
+
+.button-second:active {
   background-color: #82B3D3;
 }
 

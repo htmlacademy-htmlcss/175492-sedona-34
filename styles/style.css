@@ -29,6 +29,10 @@ body {
   color: #333;
 }
 
+img {
+  object-fit: contain;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -57,6 +61,7 @@ body {
 /* Кнопки */
 .button {
   display: block;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -68,16 +73,20 @@ body {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  padding: 8px 15px;
-  box-sizing: border-box;
+  padding: 9px 15px 8px;
 }
 
-.button-second {
-  background-color: #82B3D3;
+.button:hover {
+  background-color: #615048;
 }
 
-.button-append {
-  background-color: #7DB54F;
+.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #E5E5E5;
 }
 
 /* Навигация */
@@ -93,7 +102,7 @@ body {
 .logo {
   cursor: pointer;
 }
-/* Разрешена ли такая формулировка?? */
+
 .logo img {
   display: block;
   position: relative;
@@ -105,18 +114,68 @@ body {
   justify-content: space-between;
 }
 
+.navigation-link {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 20px 17px;
+  position: relative;
+}
+
+.navigation-link:hover {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.navigation-icon {
+  position: absolute;
+  fill: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.navigation-link:hover .navigation-icon{
+  fill: #756157;
+}
+
+.navigation-link:active .navigation-icon{
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .site-navigation {
   margin: 0;
   padding: 0;
+  width: 500px;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
 
+.site-navigation-link-active::before {
+  position: absolute;
+  right: 17px;
+  bottom: 0;
+  left: 17px;
+  height: 2px;
+  background-color: #756257;
+  content: "";
+}
+
 .user-navigation {
   margin: 0;
   padding: 0;
+  width: 310px;
   display: flex;
+  justify-content: flex-end;
   list-style: none;
 }
 
@@ -130,14 +189,22 @@ body {
   margin-left: 20px;
 }
 
-.user-favorutes {
-  position: relative;
-}
-
 .number-favorites {
   position: absolute;
+  content: '';
+  top: 15px;
+  left: 24px;
+  background-color: #7DB54F;
+  color: #fff;
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
   font-size: 10px;
   line-height: 13px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-navigation-button {
@@ -146,45 +213,38 @@ body {
   margin-bottom: 19px;
 }
 
-.navigation-link {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  color: #000;
-  text-decoration: none;
-  text-align: center;
-  padding: 20px 17px;
-}
-/* Можно ли? Нормально ли работает во всех браузерах? */
-.site-navigation-link-active {
-  position: relative;
-  text-decoration-line: underline;
-  text-underline-offset: 23px;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #756257;
-}
-
 /* Промо-блок */
 .promo {
-  text-align: center;
-}
-
-.promo-container {
   background-image: url("../images/welcome-background.jpg");
   background-color: #deebf4;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   padding-top: 51px;
-  padding-bottom: 82px;
   margin-bottom: 63px;
+  text-align: center;
+}
+
+.promo::after {
+  background-image: url("../images/welcome-divider.svg");
+  background-position: 50% bottom;
+  background-repeat: no-repeat;
+  height: 57px;
+  content: '';
+  display: block;
 }
 
 .promo-image {
   display: block;
   margin: 0 auto;
+  margin-bottom: 25px;
 }
 
-.promo-title {
+/* Блок преимуществ */
+.advantages {
+  text-align: center;
+}
+
+.advantages-intro {
   color: #000;
   font-size: 30px;
   line-height: 36px;
@@ -192,11 +252,10 @@ body {
   margin: 0 290px 31px;
 }
 
-.promo-caption {
+.advantages-caption {
   margin: 0 270px 90px;
 }
 
-/* Блок преимуществ */
 .advantages-list {
   margin: 0;
   padding: 0;
@@ -207,6 +266,14 @@ body {
   text-align: center;
   list-style: none;
   background-color: rgba(131, 179, 211, 0.12);
+  counter-reset: advantages-number;
+}
+
+.advantages-number::before {
+  display: block;
+  counter-increment: advantages-number;
+  content: "— №" counter(advantages-number) " —";
+  margin-bottom: 30px;
 }
 
 .advantages-item {
@@ -224,6 +291,7 @@ body {
 
 .advantages-image {
   display: block;
+  width: 800px;
 }
 
 .advantages-text-column {
@@ -232,20 +300,12 @@ body {
   padding: 103px 85px 84px;
 }
 
-.advantages-image-column {
-  width: 800px;
-}
-
 .advantages-title {
   margin: 0 24px 30px;
   color: #000;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-}
-
-.advantages-description {
-  margin-top: 30px;
 }
 
 .advantages-blue {
@@ -296,8 +356,7 @@ body {
 /* Поиск гостиниц */
 .search {
   text-align: center;
-  padding-top: 90px;
-  padding-bottom: 93px;
+  padding: 90px 200px 93px;
 }
 
 .search-title {
@@ -322,6 +381,7 @@ body {
   line-height: 36px;
   padding: 12px 15px;
 }
+
 /* Подписка на рассылку */
 .subscribe {
   text-align: center;
@@ -358,6 +418,16 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
+  padding: 12px 15px;
+  min-width: 200px;
+}
+
+.subscribe-button:hover {
+  background-color: #68A2CA;
+}
+
+.subscribe-button:active {
+  background-color: #82B3D3;
 }
 
 .subscribe-email {
@@ -375,6 +445,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 40px 70px 30px;
+  align-items: center;
 }
 
 .social-list {
@@ -389,10 +460,28 @@ body {
   font-family: inherit;
   background-color: #fff;
   color: #000;
-  cursor: pointer;
   min-width: 47px;
   min-height: 40px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.social-icon {
+  position: absolute;
+  fill: #83B3D3;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.social-button:hover .social-icon {
+  fill: #68A2CA;
+}
+
+.social-button:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .phone {
@@ -402,7 +491,41 @@ body {
   text-decoration: none;
   text-align: center;
 }
-/* Каталог */
+
+.phone:hover {
+  color: #756157;
+}
+
+.phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.htmlacademy-logo {
+  position: relative;
+  display: block;
+  min-width: 115px;
+  min-height: 33px;
+}
+
+.htmlacademy-icon {
+  position: absolute;
+  fill: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.htmlacademy-logo:hover .htmlacademy-icon {
+  fill: #756157;
+}
+
+.htmlacademy-logo:active .htmlacademy-icon {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+/* Страница каталога */
 .filter-container {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;
   background-size: cover;
@@ -430,7 +553,34 @@ body {
   line-height: 21px;
   color: #fff;
   text-decoration: none;
-  margin-right: 25px;
+  display: block;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item:not(:last-child) {
+  padding-right: 25px;
+  background: url("../images/breadcrumbs-arrow.svg") no-repeat;
+  background-size: 5px 8px;
+  background-position: center right 10px;
+}
+
+.breadcrumbs-icon {
+  fill: #fff;
+}
+
+.breadcrumbs-link:hover .breadcrumbs-icon{
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active .breadcrumbs-icon{
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 /* Фильтры каталога */
@@ -441,14 +591,14 @@ body {
 
 .filter-form-left {
   display: flex;
-  min-width: 366px;
-  gap: 70px;
+  width: 366px;
+  justify-content: space-between;
 }
 
 .filter-form-right {
   display: flex;
   width: 518px;
-  gap: 70px;
+  justify-content: space-between;
 }
 
 .filter-group {
@@ -473,11 +623,28 @@ body {
   line-height: 21px;
 }
 
-.filter-button {
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.apply-button {
   background-color: #82B3D3;
   border: none;
   font-size: 16px;
   line-height: 20px;
+  padding: 14px 15px;
+  min-width: 160px;
+  margin-bottom: 20px;
+}
+
+.apply-button:hover {
+  background-color: #68A2CA;
+}
+
+.apply-button:active {
+  background-color: #82B3D3;
 }
 
 .reset-button {
@@ -491,10 +658,34 @@ body {
   border: none;
   cursor: pointer;
 }
-/* Каталог отелей */
 
+.reset-button:hover {
+  opacity: 0.6;
+}
+
+.reset-button:active {
+  opacity: 0.3;
+}
+
+.reset-button:focus {
+  color: #fff;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+/* Каталог отелей */
 .catalog {
   padding: 50px 71px 25px 72px;
+  position: relative;
+}
+
+.catalog::after {
+  content:'';
+  position: absolute;
+  left: 73px;
+  right: 72px;
+  border-bottom: 1px solid #E6E6E6;
+  bottom: 115px;
 }
 /* Сортировка каталога */
 .sorting-container {
@@ -514,13 +705,11 @@ body {
 }
 
 .sorting-select {
-  /* box-sizing: border-box; */
   min-width: 160px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
-  /* padding: 14px 20px; */
 }
 
 .view {
@@ -546,6 +735,35 @@ body {
   text-decoration: none;
 }
 
+.view-link:hover {
+  border: 2px solid #000;
+}
+
+.view-link:focus {
+  border: 2px solid #68A2CA;
+  border-radius: 4px;
+  outline: none;
+}
+
+.view-link:active {
+  border: 2px solid #000;
+}
+
+.view-link-table {
+  background: url("../images/icon-table.svg") no-repeat center;
+    background-size: 16px 14px;
+}
+
+.view-link-slide {
+  background: url("../images/icon-slideshow.svg") no-repeat center;
+    background-size: 16px 14px;
+}
+
+.view-link-list {
+  background: url("../images/icon-list.svg") no-repeat center;
+    background-size: 16px 14px;
+}
+
 .view-link-active {
   border: 2px solid #000;
 }
@@ -565,7 +783,8 @@ body {
   line-height: 21px;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(2, 140px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto repeat(3, min-content);
   gap: 16px 20px;;
 }
 
@@ -577,7 +796,6 @@ body {
 
 .hotel-card-img {
   display: block;
-  object-fit: contain;
   margin-bottom: 16px;
 }
 
@@ -594,6 +812,49 @@ body {
 
 .hotel-price {
   margin: 0;
+}
+
+.button-second {
+  background-color: #82B3D3;
+}
+
+.button-second:hover {
+  background-color: #68A2CA;
+}
+
+.button-second:active {
+  background-color: #82B3D3;
+}
+
+.button-append {
+  background-color: #7DB54F;
+}
+
+.button-second:hover {
+  background-color: #6C9E42;
+}
+
+.button-second:active {
+  background-color: #7DB54F;
+}
+
+.hotel-star {
+  background: url("../images/star.svg");
+  align-self: center;
+  height: 17px;
+  background-repeat: space;
+}
+
+.hotel-star-four {
+  width: 89px;
+}
+
+.hotel-star-three {
+  width: 66px;
+}
+
+.hotel-star-two {
+  width: 42px;
 }
 
 .hotel-rating {

@@ -556,11 +556,11 @@ img {
   display: block;
 }
 
-.breadcrumbs-link:hover {
+.breadcrumbs-link:not(:last-child):hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-link:not(:last-child):active {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -789,7 +789,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto repeat(3, min-content);
-  gap: 16px 20px;;
+  gap: 16px 20px;
 }
 
 .hotel-card-link {
@@ -889,34 +889,36 @@ img {
 }
 
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #fff;
   background-color: #82B3D3;
   border: 1px solid #82B3D3;
+  border-radius: 4px;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   width: 60px;
   height: 60px;
   padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.pagination-link:hover {
+.pagination-link:not(.pagination-active):hover {
   background-color: #68A2CA;
 }
 
-.pagination-link:active {
+.pagination-link:not(.pagination-active):active {
   background-color: #82B3D3;
   color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-active {
   border: none;
-  color: #000;
-  background-color: #F2F2F2;
-}
-.pagination-active:hover {
-  background-color: #F2F2F2;
-}
-
-.pagination-active:active {
   color: #000;
   background-color: #F2F2F2;
 }
@@ -928,5 +930,3 @@ img {
   align-self: center;
   margin-right: 51px;
 }
-
-

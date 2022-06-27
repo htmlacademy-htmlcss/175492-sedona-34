@@ -74,22 +74,25 @@
               <fieldset class="filter-group filter-infrastructure">
                 <legend class="filter-caption">Инфраструктура:</legend>
                 <ul class="filter-list">
-                  <li>
-                    <label>
-                      <input type="checkbox" name="filter-form-pool" checked>
-                      Бассейн
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="filter-form-pool" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Бассейн</span>
                     </label>
                   </li>
-                  <li>
-                    <label>
-                      <input type="checkbox" name="filter-form-parking" checked>
-                      Парковка
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="filter-form-parking" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Парковка</span>
                     </label>
                   </li>
-                  <li>
-                    <label>
-                      <input type="checkbox" name="filter-form-wifi">
-                      Wi-Fi
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="visually-hidden control-input" type="checkbox" name="filter-form-wifi">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
                 </ul>
@@ -97,22 +100,25 @@
               <fieldset class="filter-group filter-type-housing">
                 <legend class="filter-caption">Тип Жилья:</legend>
                 <ul class="filter-list">
-                  <li>
-                    <label>
-                      <input type="radio" name="filter-form-housing" value="hotel" checked>
-                      Гостиница
+                  <li class="filter-item">
+                    <label class="control control-radio">
+                      <input class="visually-hidden control-input" type="radio" name="filter-form-housing" value="hotel" checked>
+                      <span class="control-mark"></span>
+                      <span class="control-label">Гостиница</span>
                     </label>
                   </li>
-                  <li>
-                    <label>
-                      <input type="radio" name="filter-form-housing" value="motel">
-                      Мотель
+                  <li class="filter-item">
+                    <label class="control control-radio">
+                      <input class="visually-hidden control-input" type="radio" name="filter-form-housing" value="motel">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Мотель</span>
                     </label>
                   </li>
-                  <li>
-                    <label>
-                      <input type="radio" name="filter-form-housing" value="apartaments">
-                      Апартаменты
+                  <li class="filter-item">
+                    <label class="control control-radio">
+                      <input class="visually-hidden control-input" type="radio" name="filter-form-housing" value="apartaments">
+                      <span class="control-mark"></span>
+                      <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
@@ -123,10 +129,10 @@
                 <legend class="filter-caption">Стоимость,&nbsp;₽:</legend>
                 <div class="range">
                   <div class="range-wrapper-inputs">
-                    <input class="range-input range-input-from" type="text" name="filter-form-price-from" id="filter-form-price-from" value="0">
-                    <label class="form-filter-label" for="filter-form-price-from">от</label>
-                    <input class="range-input range-input-to" type="text" name="filter-form-price-to" id="filter-form-price-to" value="9000">
-                    <label class="form-filter-label" for="filter-form-price-to">до</label>
+                    <input class="range-input range-input-from" type="number" name="price-from" id="price-from" placeholder="0">
+                    <label class="form-filter-label filter-label-from" for="price-from">от</label>
+                    <input class="range-input range-input-to" type="number" name="price-to" id="price-to" placeholder="9000">
+                    <label class="form-filter-label filter-label-to" for="price-to">до</label>
                   </div>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 228px">

@@ -212,7 +212,7 @@ img {
 /* Промо-блок */
 .promo {
   background-image: url("../images/welcome-background.jpg");
-  background-color: #deebf4;
+  background-color: #3F5E72;
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding-top: 51px;
@@ -636,9 +636,82 @@ img {
   list-style: none;
 }
 
-.filter-group label {
+.filter-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 40px;
   font-size: 18px;
   line-height: 21px;
+}
+
+.filter-infrastructure .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control:active .control-mark {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input:focus + .control-mark {
+  background: rgba(255, 255, 255, 0.6);
+  outline: 3px solid #83B3D3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  background: url("../images/checked.svg") no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 10px;
+  top: 6px;
+  left: 4px;
+}
+
+.filter-type-housing .control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.control-radio:hover .control-mark {
+  background-color: #fff;
+}
+
+.control-radio:active .control-mark {
+  background-color: #fff;
+}
+
+.control-inputr:focus + .control-mark {
+  background: #fff;
+  outline: 3px solid #83B3D3;
+}
+
+.control-inputr[type="radio"]:checked + .control-mark::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
 }
 
 .filter-price {
@@ -648,18 +721,18 @@ img {
 .range-wrapper-inputs {
   margin-bottom: 32px;
   display: flex;
+  position: relative;
 }
 
 .range-input {
   box-sizing: border-box;
   width: 144px;
-  padding: 14px 32px 13px 19px;
+  padding: 12px 32px 11px 19px;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   background-color: transparent;
   border: 2px solid #fff;
-  /* border-radius: 4px; */
   color: #fff;
 }
 
@@ -673,8 +746,40 @@ img {
   border-left: 1px solid #fff;
 }
 
+.range-input:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:not(:placeholder-shown) {
+  background-color: #756257;
+}
+
+.range-input:focus {
+  box-shadow:
+    0 0 0 3px #81B3D2,
+    inset 0 0 0 3px #81B3D2;
+  outline: none;
+  z-index: 1;
+}
+
+.range-input::placeholder {
+  color: #fff;
+}
+
 .form-filter-label {
   position: absolute;
+  opacity: 0.3;
+  font-size: 18px;
+  line-height: 21px;
+  top: 12px;
+}
+
+.filter-label-from {
+  left: 112px;
+}
+
+.filter-label-to {
+  right: 17px;
 }
 
 .range-input::-webkit-outer-spin-button,
@@ -762,11 +867,12 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   color: #fff;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  min-width: 100px;
+  align-self: center;
 }
 
 .reset-button:hover {

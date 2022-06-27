@@ -431,13 +431,30 @@ img {
 }
 
 .subscribe-email {
+  margin: 0;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #000;
+  padding: 20px 22px 19px;
   background-color: #F2F2F2;
   border-radius: 10px 0 0 10px;
   border: none;
+}
+
+.subscribe-email:hover {
+  background-color: #E6E6E6;
+}
+
+.subscribe-email:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.subscribe-email::placeholder {
+  color: #000;
+  opacity: 0.6;
 }
 
 /* Футер */

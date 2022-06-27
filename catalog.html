@@ -119,12 +119,24 @@
             <div class="filter-form-right">
               <fieldset class="filter-group filter-price">
                 <legend class="filter-caption">Стоимость,&nbsp;₽:</legend>
-                <input type="text" name="filter-form-price-from" id="filter-form-price-from" value="0">
-                <label for="filter-form-price-from">от</label>
-                <input type="text" name="filter-form-price-to" id="filter-form-price-to" value="9000">
-                <label for="filter-form-price-to">до</label>
-                <label class="visually-hidden" for="filter-form-range"></label>
-                <input type="range" id="filter-form-range" min="0" max="10000">
+                <div class="range">
+                  <div class="range-wrapper-inputs">
+                    <input class="range-input" type="text" name="filter-form-price-from" id="filter-form-price-from" value="0">
+                    <label class="form-filter-label" for="filter-form-price-from">от</label>
+                    <input class="range-input" type="text" name="filter-form-price-to" id="filter-form-price-to" value="9000">
+                    <label class="form-filter-label" for="filter-form-price-to">до</label>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 228px">
+                      <button class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
               <div class="filter-buttons">
                 <button class="button apply-button" type="submit">Применить</button>

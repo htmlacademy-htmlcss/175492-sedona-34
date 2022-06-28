@@ -501,6 +501,10 @@ img {
   fill: rgba(104, 162, 202, 0.3);
 }
 
+.social-button:focus-visible .social-icon {
+  fill: #68A2CA;
+}
+
 .phone {
   font-size: 40px;
   line-height: 40px;
@@ -648,7 +652,7 @@ img {
   line-height: 21px;
 }
 
-.filter-infrastructure .control-mark {
+.control-mark {
   position: absolute;
   left: 0;
   width: 20px;
@@ -670,7 +674,7 @@ img {
   outline: 3px solid #83B3D3;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {
+.control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
   content: "";
   background: url("../images/checked.svg") no-repeat;
@@ -681,29 +685,11 @@ img {
   left: 4px;
 }
 
-.filter-type-housing .control-mark {
-  position: absolute;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
+.control-input[type="radio"] + .control-mark {
   border-radius: 50%;
 }
 
-.control-radio:hover .control-mark {
-  background-color: #fff;
-}
-
-.control-radio:active .control-mark {
-  background-color: #fff;
-}
-
-.control-inputr:focus + .control-mark {
-  background: #fff;
-  outline: 3px solid #83B3D3;
-}
-
-.control-inputr[type="radio"]:checked + .control-mark::after {
+.control-input[type="radio"]:checked + .control-mark::before {
   position: absolute;
   content: "";
   width: 10px;
@@ -860,6 +846,7 @@ img {
 
 .apply-button:disabled {
   background-color: #E5E5E5;
+  pointer-events: none;
 }
 
 .reset-button {

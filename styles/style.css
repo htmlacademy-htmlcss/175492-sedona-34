@@ -452,6 +452,11 @@ img {
   outline: 3px solid #83B3D3;
 }
 
+.subscribe-email:not(:placeholder-shown) {
+  background-color: #fff;
+  outline: 2px solid #000;
+}
+
 .subscribe-email::placeholder {
   color: #000;
   opacity: 0.6;
@@ -908,11 +913,38 @@ img {
 }
 
 .sorting-select {
-  min-width: 160px;
-  border: 2px solid #E5E5E5;
+  min-width: 290px;
   border-radius: 4px;
+  padding: 12px 20px;
+  padding-right: 52px;
+  font-family: inherit;
   font-size: 18px;
   line-height: 21px;
+  border: 2px solid #E5E5E5;
+  color: #333;
+  background-color: #fff;
+  background: url("../images/select-arrow.svg") no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+
+.sorting-select:hover {
+  border: 2px solid #68a2ca;
+}
+
+.sorting-select:active {
+  border: 2px solid #3f5e72;
+}
+
+.sorting-select:focus {
+  outline: none;
+  border-color: #68a2ca;
+}
+
+.sorting-select:disabled {
+  color: #000;
+  border: 2px solid #000;
+  opacity: 0.3;
 }
 
 .view {
@@ -1128,4 +1160,8 @@ img {
   line-height: 21px;
   align-self: center;
   margin-right: 51px;
+}
+
+.sortng-quantity {
+  min-width: 160px;
 }

@@ -167,7 +167,7 @@
     </footer>
     <div class="modal-container">
       <div class="modal modal-search">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
           <svg class="close-button-icon" width="13" height="13" aria-hidden="true" focusable="false" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
@@ -179,7 +179,7 @@
             <div class="field-group-date">
               <label class="modal-label" for="arrival-date">Дата заезда:</label>
               <input class="field field-date" type="text" id="arrival-date" name="arrival-date" placeholder="27 апреля 2020">
-              <button class="button-calendar">
+              <button class="button-calendar" type="button">
                 <span class="visually-hidden">Выбрать дату:</span>
               </button>
               <p class="date-status status-error">Мы не можем отправить вас в прошлое.</p>
@@ -187,28 +187,48 @@
             <div class="field-group-date">
               <label class="modal-label" for="departure-date">Дата выезда:</label>
               <input class="field field-date" type="text" id="departure-date" name="departure-date" placeholder="1 сентября 2021">
-              <button class="button-calendar">
+              <button class="button-calendar" type="button">
                 <span class="visually-hidden">Выбрать дату:</span>
               </button>
               <p class="date-status status-succes">На эти даты есть свободные номера. Пока есть.</p>
             </div>
             <div class="field-group-adults">
               <label class="modal-label" for="adults">Взрослые:</label>
-              <button class="button-visitors button-decrease">
+              <button class="button-visitors button-decrease" type="button">
                 <span class="visually-hidden">Уменшить количество</span>
               </button>
               <input class="field field-visitors" type="text" id="adults" name="adults" placeholder="2">
-              <button class="button-visitors button-increase">
+              <button class="button-visitors button-increase" type="button">
                 <span class="visually-hidden">Увеличить количество</span>
               </button>
             </div>
             <div class="field-group-children">
-              <label class="modal-label modal-label-children" for="children">Дети:</label>
-              <button class="button-visitors button-decrease">
+              <span class="modal-label modal-label-children">
+                <label class="modal-label" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                    <svg class="tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="12.5" cy="12.5" r="12.5"/>
+                      <g clip-path="url(#a)" fill="#fff">
+                        <path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/>
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path fill="#fff" transform="translate(12 8)" d="M0 0h1v9H0z"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+              <button class="button-visitors button-decrease" type="button">
                 <span class="visually-hidden">Уменшить количество</span>
               </button>
               <input class="field field-visitors" type="text" id="children" name="children" placeholder="1">
-              <button class="button-visitors button-increase">
+              <button class="button-visitors button-increase" type="button">
                 <span class="visually-hidden">Увеличить количество</span>
               </button>
             </div>

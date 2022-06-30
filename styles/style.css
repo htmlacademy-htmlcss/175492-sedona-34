@@ -638,21 +638,21 @@ img {
 .field-group-date {
   grid-column: 1/-1;
   display: grid;
-  grid-template-columns: auto 420px;
+  grid-template-columns: 155px 420px;
   position: relative;
 }
 
 .field-group-adults {
   grid-column: 1/2;
   display: grid;
-  grid-template-columns: auto 133px;
+  grid-template-columns: 155px 133px;
   position: relative;
 }
 
 .field-group-children {
   grid-column: 2/3;
   display: grid;
-  grid-template-columns: auto 133px;
+  grid-template-columns: 155px 133px;
   position: relative;
 }
 
@@ -665,6 +665,8 @@ img {
 
 .modal-label-children {
   justify-self: center;
+  position: relative;
+  padding-right: 25px;
 }
 
 .field {
@@ -803,6 +805,70 @@ img {
   display: none;
 }
 
+.tooltip {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 6px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.tooltip-icon {
+  width: 100%;
+  height: 100%;
+  color: #83B3D3;
+  display: block;
+}
+
+.tooltip-toggle:hover .tooltip-icon {
+  color: #68A2CA;
+}
+
+.tooltip-text {
+  display: block;
+  box-sizing: border-box;
+  width: 256px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 18px 23px 22px;
+  border-radius: 10px;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/tooltip-arrow.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus-visible + .tooltip-text {
+  display: block;
+}
 /* Страница каталога */
 .filter-container {
   background: #426e9b url("../images/filter-background.jpg") no-repeat;

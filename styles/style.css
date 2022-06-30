@@ -169,6 +169,7 @@ img {
 
 .user-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   margin: 0;
   padding: 0;
@@ -478,6 +479,7 @@ img {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -515,8 +517,8 @@ img {
 }
 
 .phone {
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 40px;
   line-height: 40px;
   color: #000;
@@ -573,11 +575,12 @@ img {
 }
 
 .breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
-  display: flex;
-  margin-bottom: 40px;
 }
 
 .breadcrumbs-link {
@@ -950,6 +953,7 @@ img {
   margin-left: 78px;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -1119,6 +1123,7 @@ img {
   margin-right: auto;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 

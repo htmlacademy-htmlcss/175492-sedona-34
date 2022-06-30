@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-weight: 400;
   font-style: normal;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-weight: 700;
   font-style: normal;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -21,6 +21,7 @@ html {
 body {
   margin: 0;
   height: 100%;
+  min-width: 1200px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
@@ -514,6 +515,8 @@ img {
 }
 
 .phone {
+  padding-left: 70px;
+  padding-right: 70px;
   font-size: 40px;
   line-height: 40px;
   color: #000;
@@ -887,21 +890,13 @@ img {
 /* Каталог отелей */
 .catalog {
   padding: 50px 71px 25px 72px;
-  position: relative;
 }
 
-.catalog::after {
-  content:'';
-  position: absolute;
-  left: 73px;
-  right: 72px;
-  border-bottom: 1px solid #E6E6E6;
-  bottom: 115px;
-}
 /* Сортировка каталога */
 .sorting-container {
   display: flex;
   margin-bottom: 56px;
+  align-items: center;
 }
 
 .catalog-caption {
@@ -1107,7 +1102,16 @@ img {
 
 /* Пагинация */
 .catalog-footer {
+  position: relative;
   display: flex;
+}
+
+.catalog-footer::after {
+  content:'';
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid #E6E6E6;
+  top: -30px;
 }
 
 .pagination {
@@ -1133,8 +1137,8 @@ img {
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   padding: 12px 0;
   text-align: center;
   text-decoration: none;

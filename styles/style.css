@@ -589,10 +589,34 @@ img {
   background-color: #F2F2F2;
   border: none;
   border-radius: 50%;
-  background-image: url("../images/modal-close.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+}
+
+.close-button-icon {
+  position: absolute;
+  fill: #000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:active .close-button-icon {
+  opacity: 0.3;
+}
+
+.modal-close-button:focus-visible {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
 }
 
 .modal-title {
@@ -606,10 +630,30 @@ img {
 
 .search-form {
   display: grid;
-  grid-template-columns: 1fr 133px 1fr 133px;
-  column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 50px) 60px;
   row-gap: 40px;
+}
+
+.field-group-date {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: auto 420px;
+  position: relative;
+}
+
+.field-group-adults {
+  grid-column: 1/2;
+  display: grid;
+  grid-template-columns: auto 133px;
+  position: relative;
+}
+
+.field-group-children {
+  grid-column: 2/3;
+  display: grid;
+  grid-template-columns: auto 133px;
+  position: relative;
 }
 
 .modal-label {
@@ -619,7 +663,7 @@ img {
   align-self: center;
 }
 
-.children-label {
+.modal-label-children {
   justify-self: center;
 }
 
@@ -629,14 +673,18 @@ img {
   font-size: 18px;
   line-height: 21px;
   color: #000;
-  padding: 14px 35px 15px 19px;
   background-color: #F2F2F2;
   border-radius: 4px;
   border: none;
 }
 
 .field-date {
-  grid-column: 2/-1;
+  padding: 14px 35px 15px 19px;
+}
+
+.field-visitors {
+  padding: 15px 40px 14px;
+  text-align: center;
 }
 
 .field:hover {
@@ -656,6 +704,72 @@ img {
 .field::placeholder {
   color: #000;
   opacity: 0.6;
+}
+
+.date-status {
+  position: absolute;
+  margin: 0;
+  top: 58px;
+  left: 155px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.status-error {
+  color: #FF5757;
+}
+
+.button-calendar {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 15px;
+  height: 15px;
+  top: 18px;
+  right: 19px;
+  background: url("../images/date.svg") no-repeat;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.button-visitors {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  border: none;
+  opacity: 0.3;
+  cursor: pointer;
+  top: 12px;
+}
+
+.button-decrease {
+  right: 95px;
+  background: url("../images/decrease.svg") no-repeat;
+  background-position: center;
+}
+
+.button-increase {
+  right: 13px;
+  background: url("../images/increase.svg") no-repeat;
+  background-position: center;
+}
+
+.button-visitors:hover {
+  opacity: 1;
+}
+
+.button-visitors:active {
+  opacity: 0.2;
+}
+
+.button-visitors:focus-visible {
+  opacity: 1;
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+  outline: none;
 }
 
 .modal-search-button {

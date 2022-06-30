@@ -19,14 +19,14 @@ html {
 }
 
 body {
-  height: 100%;
   margin: 0;
+  height: 100%;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
-  background-color: #F2F2F2;
   color: #333;
+  background-color: #F2F2F2;
 }
 
 img {
@@ -45,11 +45,11 @@ img {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: 1200px;
   min-height: 100%;
+  margin: 0 auto;
   background-color: #fff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
@@ -62,6 +62,7 @@ img {
 .button {
   display: block;
   box-sizing: border-box;
+  padding: 9px 15px 8px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -73,7 +74,6 @@ img {
   text-transform: uppercase;
   border-radius: 4px;
   cursor: pointer;
-  padding: 9px 15px 8px;
 }
 
 .button:hover {
@@ -111,14 +111,14 @@ img {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
+  padding: 20px 17px;
   font-size: 20px;
   font-weight: 700;
+  text-align: center;
   color: #000;
   text-decoration: none;
-  text-align: center;
-  padding: 20px 17px;
-  position: relative;
 }
 
 .navigation-link:hover {
@@ -131,12 +131,12 @@ img {
 
 .navigation-icon {
   position: absolute;
-  fill: #000;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+  fill: #000;
 }
 
 .navigation-link:hover .navigation-icon{
@@ -148,11 +148,11 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   width: 500px;
-  display: flex;
-  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -167,11 +167,11 @@ img {
 }
 
 .user-navigation {
+  display: flex;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
   width: 310px;
-  display: flex;
-  justify-content: flex-end;
   list-style: none;
 }
 
@@ -187,20 +187,20 @@ img {
 
 .number-favorites {
   position: absolute;
-  content: '';
   top: 15px;
   left: 24px;
-  background-color: #7DB54F;
-  color: #fff;
-  border-radius: 50%;
-  min-height: 20px;
-  min-width: 20px;
-  font-size: 10px;
-  line-height: 13px;
-  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 20px;
+  min-width: 20px;
+  background-color: #7DB54F;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  content: '';
 }
 
 .user-navigation-button {
@@ -553,7 +553,6 @@ img {
 .htmlacademy-logo:active .htmlacademy-icon {
   fill: rgba(117, 97, 87, 0.3);
 }
-
 
 /* Страница каталога */
 .filter-container {
